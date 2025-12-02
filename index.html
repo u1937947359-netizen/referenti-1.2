@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referenti Partner Aggiornato</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configure Tailwind to use the Inter font and modern styles
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#007bff',
+                        'success': '#28a745',
+                        'danger': '#d9534f',
+                        'background': '#f5f8fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for better aesthetics/readability */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+    </style>
+    <script>
+        // Define the CC email to be included in all individual partner mail actions
+        const GLOBAL_CC_EMAIL = 'backoffice@zeta-group.it';
+
+        /**
+         * Opens a mail client to send an email to the specified addresses (TO)
+         * and includes a fixed CC address.
+         * @param {string[]} addresses - Array of email addresses for TO field.
+         */
+        function sendMail(addresses) {
+            const toAddresses = addresses.join(';');
+            // Construct the mailto link including the fixed CC address
+            const mailto = `mailto:${toAddresses}?cc=${GLOBAL_CC_EMAIL}`;
+            window.location.href = mailto;
+        }
+
+        /**
+         * Opens a mail client to send an email using BCC for the specified addresses.
+         * @param {string[]} bccAddresses - Array of email addresses for BCC field.
+         */
+        function sendBccMail(bccAddresses) {
+            const mailto = `mailto:?bcc=${bccAddresses.join(';')}`;
+            window.location.href = mailto;
+        }
+    </script>
+</head>
+<body class="bg-background p-4 sm:p-8">
+
+    <header class="mb-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-primary text-center tracking-tight">
+            Referenti Partner Aggiornato
+        </h1>
+    </header>
+
+    <!-- Global Actions (Send All/Inserters) -->
+    <div class="actions flex flex-wrap justify-center gap-4 mb-10 p-4 bg-white shadow-lg rounded-xl">
+        <button
+            onclick="sendBccMail([
+                'giusycaramazza@pentaservizi.it', 'francescoavona@mediacallsrl.it', 'backoffice@nisacall.it',
+                'tl.galatina@nisacall.it', 'l.minunno@nisacall.it', 'g.gioia@nisacall.it', 'ile.pandi84@gmail.com',
+                'm.daversa@nisacall.it', 'g.capobianco@nisacall.it', 'antonio.boccuto@103srls.it',
+                'manuel.costa@gamaevolutionsrl.it', 'amministrazione@8tt8srl.it', 'ilariov@zeta-group.it',
+                'lucam@zeta-group.it', 'carmenv@zeta-group.it', 'armandop@zeta-group.it' , 'domenico.criseo@8tt8srl.it',
+                'backoffice@zeta-group.it' /* Aggiunto come BCC su richiesta di 'CC in tutte le sezioni' */
+            ])"
+            class="bg-success hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-150 ease-in-out shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-success/50 text-sm sm:text-base">
+            📩 Invia a chi inserisce (CCN)
+        </button>
+
+        <button
+            onclick="sendBccMail([
+                'antonio.boccuto@103srls.it', 'amministrazione@8tt8srl.it',
+                'assistenza.elitesrl@gmail.com', 'partner@gruppoelitesrl.com', 'amministrazione@gruppoelitesrl.com',
+                'ferdirotu@gmail.com', 'alessandra.desimone@sixlives.it','backoffice@nisacall.it', 'tl.galatina@nisacall.it',
+                'l.minunno@nisacall.it', 'g.gioia@nisacall.it', 'ile.pandi84@gmail.com', 'm.daversa@nisacall.it',
+                'g.capobianco@nisacall.it','managementatf@gmail.com', 'bo.gestionepratiche@gmail.com',
+                't.dimaio@free-voice.it', 'alessandroserviziaziende@gmail.com', 'ilariov@zeta-group.it',
+                'lucam@zeta-group.it', 'carmenv@zeta-group.it', 'armandop@zeta-group.it',
+                'manuel.costa@gamaevolutionsrl.it', 'domenico.criseo@8tt8srl.it',
+                'backoffice@zeta-group.it' /* Aggiunto come BCC su richiesta di 'CC in tutte le sezioni' */
+            ])"
+            class="bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-150 ease-in-out shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-primary/50 text-sm sm:text-base">
+            📩 Invia a Tutti i Partner (CCN)
+        </button>
+    </div>
+
+    <!-- Contact Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- CALL CENTER 103 / 8TT8 -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">CALL CENTER 103 / 8TT8</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente:</span> Antonio Boccuto
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3505802087</div>
+            <div class="info text-gray-700 text-sm">📧 antonio.boccuto@103srls.it</div>
+            <div class="info text-gray-700 text-sm mt-3">
+                                <span class="font-bold text-gray-900">📞 Referente:</span> Domenico Criseo
+                            <div class="info text-gray-700 text-sm">📱 3894817260</div>
+            </div>
+            <div class="info text-gray-700 text-sm">📧 domenico.criseo@8tt8srl.it</div>
+            <div class="note italic text-danger text-xs mt-3 p-2 bg-red-50 rounded-md">Pianificazione solo via mail</div>
+            <button onclick="sendMail(['antonio.boccuto@103srls.it','domenico.criseo@8tt8srl.it','amministrazione@8tt8srl.it'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+        <!-- ELITE SRLS -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">ELITE SRLS</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente:</span> Rosy
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3492908547</div>
+            <div class="info text-gray-700 text-sm">📧 assistenza.elitesrl@gmail.com</div>
+            <div class="info text-gray-700 text-sm">📧 partner@gruppoelitesrl.com</div>
+            <div class="info text-gray-700 text-sm">📧 amministrazione@gruppoelitesrl.com</div>
+            <button onclick="sendMail(['assistenza.elitesrl@gmail.com','partner@gruppoelitesrl.com','amministrazione@gruppoelitesrl.com'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+        <!-- SIX LIVES SRLS -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">SIX LIVES SRLS</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente:</span> Nando Rotundo
+            </div>
+            <div class="info text-gray-700 text-sm">📱 335319112</div>
+            <div class="info text-gray-700 text-sm">📧 ferdirotu@gmail.com</div>
+            <div class="info text-gray-700 text-sm mt-3">
+                <span class="font-bold text-gray-900">📞 TL:</span> Alessandra De Simone
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3887563288</div>
+            <div class="info text-gray-700 text-sm">📧 alessandra.desimone@sixlives.it</div>
+            <button onclick="sendMail(['ferdirotu@gmail.com','alessandra.desimone@sixlives.it'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+        <!-- NISA CALL SRLS Galatina -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">NISA CALL SRLS Galatina</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente Galatina:</span> Ilenia Pandi
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3200421984</div>
+            <div class="info text-gray-700 text-sm">📧 backoffice@nisacall.it</div>
+            <div class="info text-gray-700 text-sm mt-3">
+                <span class="font-bold text-gray-900">📞 Referente Ceglie:</span> Massimo D’aversa
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3343253546</div>
+            <!-- Displaying all emails for NISA CALL for completeness -->
+            <div class="info text-gray-700 text-xs mt-1">📧 tl.galatina@nisacall.it, l.minunno@nisacall.it, g.gioia@nisacall.it, ile.pandi84@gmail.com, m.daversa@nisacall.it, g.capobianco@nisacall.it</div>
+            <button onclick="sendMail(['backoffice@nisacall.it','tl.galatina@nisacall.it','l.minunno@nisacall.it','g.gioia@nisacall.it','ile.pandi84@gmail.com','m.daversa@nisacall.it','g.capobianco@nisacall.it'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+
+        <!-- ATF MANAGEMENT -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">ATF MANAGEMENT</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente:</span> Stefano Tafuro
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3451009990</div>
+            <div class="info text-gray-700 text-sm">📧 managementatf@gmail.com</div>
+            <div class="info text-gray-700 text-sm">📧 bo.gestionepratiche@gmail.com</div>
+            <button onclick="sendMail(['managementatf@gmail.com','bo.gestionepratiche@gmail.com'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+        <!-- FREE VOICE -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">FREE VOICE</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente:</span> Tania Di Maio
+            </div>
+            <div class="info text-gray-700 text-sm">📱 3510036964</div>
+            <div class="info text-gray-700 text-sm">📧 t.dimaio@free-voice.it</div>
+            <div class="note italic text-danger text-xs mt-3 p-2 bg-red-50 rounded-md">Il partner non utilizza SIDIAL</div>
+            <button onclick="sendMail(['t.dimaio@free-voice.it'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+
+        
+        <!-- GA.MA SRL -->
+        <div class="card bg-white border-l-4 border-primary shadow-lg p-6 rounded-xl transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+            <div class="team-name text-xl font-bold text-primary mb-2">GA.MA SRL</div>
+            <div class="info text-gray-700 text-sm">
+                <span class="font-bold text-gray-900">📞 Referente:</span> Manuel Costa
+            </div>
+            <div class="info text-gray-700 text-sm">📧 manuel.costa@gamaevolutionsrl.it</div>
+            <button onclick="sendMail(['manuel.costa@gamaevolutionsrl.it'])"
+                class="mt-4 w-full bg-primary hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition duration-150 ease-in-out shadow-md">
+                📩 Invia Mail
+            </button>
+        </div>
+
+
+    </div>
+</body>
+</html>
